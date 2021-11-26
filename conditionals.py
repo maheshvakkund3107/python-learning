@@ -1,4 +1,4 @@
-def loops(name):
+def conditionals(name):
     i = 7
     if i % 2 == 0:
         print("even")
@@ -46,4 +46,4 @@ def loops(name):
 
 
 if __name__ == '__main__':
-    loops('PyCharm')
+    conditionals('PyCharm')
