@@ -1,4 +1,4 @@
-def collections(name):
+def list_example():
     # List
     ls = [1, 2, 3, 4, 5]
     print(ls)
@@ -65,6 +65,8 @@ def collections(name):
     list_numbers.reverse()
     print(list_numbers)
 
+
+def set_example():
     # Set
     s = {1, 2, 3, 4}
     print(s)
@@ -119,5 +121,64 @@ def collections(name):
     # Validation of set is missing here
 
 
+def dict_example():
+    # Dict
+    d = dict()
+    d = {}
+    d = {'id': 1, 'first_name': 'Scott', 'last_name': 'Tiger', 'amount': 1000.0}  # dict
+    print(d)
+
+    # Accessing the elements.
+    print(d['id'])
+    print(d['first_name'])  # if the key is missing in the dict it will throw error
+
+    print(d.get('id'))  # if the key is missing in the dict it will not throw error
+    print(d.keys())
+    print(d.values())
+    print(d.items())
+
+    print(list(d.items()))
+    print(list(d.items())[0])
+
+    d['commission_pct'] = 10
+    print(d)
+    d['phone_number'] = 1234567890
+    print(d)
+    d.setdefault('amount')
+    # d.setdefault('dup_commission_pct') -> This will set the field with the value as None or Nan
+    d.setdefault('dup_commission_pct', 10.0)
+    print(d)
+
+    new_dict = {'id': 1}
+    new_dict.update({'first_name': 'Donald', 'last_name': 'Duck'})
+    print(new_dict)
+    new_dict.update([('amount', 1000), ('commission_pct', 10)])
+    print(new_dict)
+    new_dict.update([('amount', 1500), ('commission_pct', 15), ('phone_number', 1234567890)])
+    print(new_dict)
+    new_dict.pop('phone_number')
+    print(new_dict)
+    new_dict.pop('phone_number', 'No such key exists')
+    print(new_dict)
+    new_dict.popitem()
+    print(new_dict)
+
+
+def tuple_example():
+    # Tuple
+    t = tuple()
+    t = ()
+    t = (1, 'Scott', 'Tiger')
+    print(t)
+    # Returns the number of occuerencies of the element.
+    t = (1, 2, 3, 4, 4, 6, 1, 2, 3)
+    print(t.count(4))
+    # Returns the first index of the value
+    print(t.index(2))  # index has overloaded method, its missing here
+
+
 if __name__ == '__main__':
-    collections('PyCharm')
+    list_example()
+    dict_example()
+    tuple_example()
+    set_example()
