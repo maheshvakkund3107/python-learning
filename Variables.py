@@ -4,7 +4,7 @@ class Car:
     wheels = 6
 
     # Variables defined inside a init method are instance variables
-    # Stored inside Inside Name Space
+    # Stored inside Name Space
     def __init__(self):
         self.mileage = 10
         self.company = "BMW"
